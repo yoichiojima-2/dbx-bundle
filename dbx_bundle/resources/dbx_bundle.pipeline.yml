@@ -1,0 +1,14 @@
+# The main pipeline for dbx_bundle
+resources:
+  pipelines:
+    dbx_bundle_pipeline:
+      name: dbx_bundle_pipeline
+      catalog: workspace
+      schema: dbx_bundle_${bundle.target}
+      serverless: true
+      libraries:
+        - notebook:
+            path: ../src/pipeline.ipynb
+
+      configuration:
+        bundle.sourcePath: ${workspace.file_path}/src
