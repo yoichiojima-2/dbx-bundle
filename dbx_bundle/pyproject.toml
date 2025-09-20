@@ -14,7 +14,6 @@ dev = [
     # than the remote cluster or serverless compute you connect to.
     # See also https://docs.databricks.com/dev-tools/databricks-connect.html.
     "databricks-connect>=15.4,<15.5",
-    "databricks-cli>=0.18.0",
     "databricks-sdk>=0.65.0",
 ]
 
