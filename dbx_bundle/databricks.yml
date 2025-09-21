@@ -24,6 +24,15 @@ targets:
     workspace:
       host: https://dbc-3a46351a-8bed.cloud.databricks.com
 
+  # Sandbox environment for UI experimentation
+  sandbox:
+    mode: development
+    presets:
+      name_prefix: "[sandbox ${workspace.current_user.short_name}] "
+    workspace:
+      host: https://dbc-3a46351a-8bed.cloud.databricks.com
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/sandbox
+
   prod:
     mode: production
     workspace:
