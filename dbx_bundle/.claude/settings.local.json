@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(databricks bundle deploy:*)",
+      "WebSearch",
+      "Bash(databricks bundle run:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
