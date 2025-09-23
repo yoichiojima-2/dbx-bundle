@@ -8,3 +8,4 @@ scratch/**
 !scratch/README.md
 uv.lock
 .mypy_cache/
+.pytest_cache/
