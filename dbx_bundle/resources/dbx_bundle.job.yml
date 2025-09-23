@@ -19,15 +19,9 @@ resources:
           notebook_task:
             notebook_path: ../src/notebook.ipynb
 
-        - task_key: refresh_pipeline
-          depends_on:
-            - task_key: notebook_task
-          pipeline_task:
-            pipeline_id: ${resources.pipelines.dbx_bundle_pipeline.id}
-
         - task_key: main_task
           depends_on:
-            - task_key: refresh_pipeline
+            - task_key: notebook_task
           environment_key: default
           python_wheel_task:
             package_name: dbx_bundle
