@@ -18,6 +18,10 @@ resources:
         - task_key: notebook_task
           notebook_task:
             notebook_path: ../src/notebook.ipynb
+            base_parameters:
+              param1: value1
+              param2: value2
+
 
         - task_key: main_task
           depends_on:
