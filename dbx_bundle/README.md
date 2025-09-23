@@ -10,19 +10,18 @@ and for CI/CD configuration, see https://docs.databricks.com/aws/en/dev-tools/bu
 Choose how you want to work on this project:
 
 (a) Directly in your Databricks workspace, see
-    https://docs.databricks.com/dev-tools/bundles/workspace.
+https://docs.databricks.com/dev-tools/bundles/workspace.
 
 (b) Locally with an IDE like Cursor or VS Code, see
-    https://docs.databricks.com/vscode-ext.
+https://docs.databricks.com/vscode-ext.
 
 (c) With command line tools, see https://docs.databricks.com/dev-tools/cli/databricks-cli.html
 
-
 Dependencies for this project should be installed using uv:
 
-*  Make sure you have the UV package manager installed.
-   It's an alternative to tools like pip: https://docs.astral.sh/uv/getting-started/installation/.
-*  Run `uv sync --dev` to install the project's dependencies.
+- Make sure you have the UV package manager installed.
+  It's an alternative to tools like pip: https://docs.astral.sh/uv/getting-started/installation/.
+- Run `uv sync --dev` to install the project's dependencies.
 
 # Using this project using the CLI
 
@@ -30,23 +29,27 @@ The Databricks workspace and IDE extensions provide a graphical interface for wo
 with this project. It's also possible to interact with it directly using the CLI:
 
 1. Authenticate to your Databricks workspace, if you have not done so already:
-    ```
-    $ databricks configure
-    ```
+
+   ```
+   $ databricks configure
+   ```
 
 2. To deploy a development copy of this project, type:
-    ```
-    $ databricks bundle deploy --target dev
-    ```
-    (Note that "dev" is the default target, so the `--target` parameter
-    is optional here.)
 
-    This deploys everything that's defined for this project.
-    For example, the default template would deploy a job called
-    `[dev yourname] dbx_bundle_job` to your workspace.
-    You can find that job by opening your workpace and clicking on **Jobs & Pipelines**.
+   ```
+   $ databricks bundle deploy --target dev
+   ```
+
+   (Note that "dev" is the default target, so the `--target` parameter
+   is optional here.)
+
+   This deploys everything that's defined for this project.
+   For example, the default template would deploy a job called
+   `[dev yourname] dbx_bundle_job` to your workspace.
+   You can find that job by opening your workpace and clicking on **Jobs & Pipelines**.
 
 3. Similarly, to deploy a production copy, type:
+
    ```
    $ databricks bundle deploy --target prod
    ```
@@ -57,6 +60,7 @@ with this project. It's also possible to interact with it directly using the CLI
    https://docs.databricks.com/dev-tools/bundles/deployment-modes.html).
 
 4. To run a job or pipeline, use the "run" command:
+
    ```
    $ databricks bundle run
    ```
