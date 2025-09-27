@@ -7,7 +7,14 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git push:*)",
-      "Bash(tree:*)"
+      "Bash(tree:*)",
+      "Bash(databricks bundle generate job:*)",
+      "Bash(databricks jobs:*)",
+      "Bash(databricks workspace get:*)",
+      "Bash(databricks workspace get-status:*)",
+      "Bash(databricks workspace list:*)",
+      "Bash(databricks workspace export:*)",
+      "Bash(databricks sync:*)"
     ],
     "deny": [],
     "ask": []
