@@ -14,7 +14,12 @@
       "Bash(databricks workspace get-status:*)",
       "Bash(databricks workspace list:*)",
       "Bash(databricks workspace export:*)",
-      "Bash(databricks sync:*)"
+      "Bash(databricks sync:*)",
+      "Bash(pytest:*)",
+      "Bash(uv run pytest:*)",
+      "Bash(databricks clusters:*)",
+      "Bash(databricks configure:*)",
+      "Read(//Users/yo/**)"
     ],
     "deny": [],
     "ask": []
