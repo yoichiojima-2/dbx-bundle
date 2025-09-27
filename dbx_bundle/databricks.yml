@@ -11,6 +11,10 @@ include:
   - resources/*.yml
   - resources/*/*.yml
 
+sync:
+  include:
+    - src/*.ipynb
+
 targets:
   dev:
     mode: development

@@ -1,0 +1,63 @@
+resources:
+  jobs:
+    dbx_bundle_job:
+      name: dbx_bundle_job
+      tasks:
+        - task_key: main_task
+          depends_on:
+            - task_key: notebook_task
+
+          email_notifications: {}
+
+          environment_key: default
+
+          python_wheel_task:
+            entry_point: main
+            package_name: dbx_bundle
+
+          run_if: ALL_SUCCESS
+
+        - task_key: notebook_task
+          email_notifications: {}
+          notebook_task:
+            base_parameters:
+              param1: value1
+              param2: value2
+
+            notebook_path: ../src/notebook.ipynb
+            source: WORKSPACE
+
+          run_if: ALL_SUCCESS
+
+      deployment:
+        kind: BUNDLE
+        metadata_file_path: /Workspace/Users/yoichiojima@gmail.com/.bundle/dbx_bundle/prd/state/metadata.json
+
+      edit_mode: UI_LOCKED
+
+      email_notifications: {}
+
+      environments:
+        - environment_key: default
+          spec:
+            dependencies:
+              - /Workspace/Users/yoichiojima@gmail.com/.bundle/dbx_bundle/prd/artifacts/.internal/dbx_bundle-0.0.1-py3-none-any.whl
+
+            environment_version: "2"
+
+      max_concurrent_runs: 1
+
+      queue:
+        enabled: true
+
+      run_as:
+        user_name: yoichiojima@gmail.com
+
+      trigger:
+        pause_status: UNPAUSED
+        periodic:
+          interval: 1
+          unit: DAYS
+
+      webhook_notifications: {}
+

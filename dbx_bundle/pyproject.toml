@@ -3,6 +3,9 @@ name = "dbx_bundle"
 version = "0.0.1"
 authors = [{ name = "yoichiojima@gmail.com" }]
 requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "python-dotenv>=1.1.1",
+]
 
 [dependency-groups]
 dev = [
@@ -15,6 +18,8 @@ dev = [
     # See also https://docs.databricks.com/dev-tools/databricks-connect.html.
     "databricks-connect>=15.4,<15.5",
     "databricks-sdk>=0.65.0",
+    "jupyterlab>=4.4.9",
+    "ruff>=0.13.2",
 ]
 
 [tool.pytest.ini_options]

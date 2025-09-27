@@ -1,0 +1,10 @@
+resources:
+  clusters:
+    main_cluster:
+      cluster_name: dbx_bundle_cluster
+      spark_version: 16.3.x-photon-scala2.12
+      node_type_id: i3.xlarge
+      autoscale:
+        min_workers: 1
+        max_workers: 2
+      autotermination_minutes: 30
