@@ -22,5 +22,5 @@ lint:
 format:
 	uv run ruff format .
 
-clean:
+clear:
 	for i in src/*.ipynb; do uv run jupyter nbconvert --clear-output $$i; done;
