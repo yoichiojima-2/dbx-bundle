@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/yo/Developer/repo/dbx-bundle/dbx_bundle/**)",
+      "Read(//Users/yo/Developer/repo/dbx-bundle/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
